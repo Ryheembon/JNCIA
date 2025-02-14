@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUNOS 105 Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JUNOS 105 Flashcards</h1>
+        
+        <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <span id="cardNumber"></span>
+            <button id="nextBtn">Next</button>
+        </div>
+
+        <div class="flashcard" id="flashcard">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p id="question"></p>
+                </div>
+                <div class="card-back">
+                    <p id="answer"></p>
+                </div>
+            </div>
+        </div>
+
+        <button id="flipBtn">Flip Card</button>
+        
+        <div class="category-selector">
+            <label for="categorySelect">Select Category:</label>
+            <select id="categorySelect">
+                <option value="all">All Categories</option>
+                <option value="routing">Routing</option>
+                <option value="security">Security</option>
+                <option value="switching">Switching</option>
+                <option value="troubleshooting">Troubleshooting</option>
+                <option value="high-availability">High Availability</option>
+                <option value="policy">Policy & Firewall</option>
+            </select>
+        </div>
+
+        <div class="quiz-container" id="quizContainer" style="display: none;">
+            <h2>Daily Quiz</h2>
+            <div class="quiz-question">
+                <p id="quizQuestion"></p>
+                <div class="quiz-options" id="quizOptions">
+                    <!-- Options will be inserted here -->
+                </div>
+            </div>
+            <button id="submitQuiz">Submit Answer</button>
+            <p id="quizResult"></p>
+            <p id="quizScore"></p>
+        </div>
+
+        <button id="toggleQuiz">Switch to Quiz Mode</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
