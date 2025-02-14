@@ -733,3 +733,40 @@ function submitQuiz() {
 
 toggleQuizBtn.addEventListener('click', toggleQuizMode);
 submitQuizBtn.addEventListener('click', submitQuiz);
+
+
+// Initialize the mobile navigation
+function initMobileNav() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    // Toggle navigation on click
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+}
+
+// Smooth scroll for anchor links
+function smoothScroll() {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// Initialize all functions
+function init() {
+    initMobileNav();
+    smoothScroll();
+}
+
+// Run the init function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', init);
