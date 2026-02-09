@@ -1,85 +1,67 @@
-# JNCIA-105 Quiz CLI
+# JNCIA-Junos (JNCIA-105) Study & Practice Exam
 
-An interactive command-line study tool designed to help you prepare for the JNCIA-105 certification exam. This application focuses on Junos commands, networking concepts, and essential topics covered in the exam.
+A **professional web-based study tool** to help you pass the **JNCIA-Junos** certification (JNCIA-105 / JN0-102). Includes **100+ multiple-choice questions** with explanations, aligned to the official exam blueprint.
+
+## Goal: Pass by Saturday
+
+Use the **Practice Quiz** and **Flashcards** daily. Aim for 70%+ on full quizzes (typical passing score). Focus on weak topics using the topic filter.
 
 ## Features
 
-- 🧠 **Comprehensive Question Bank**: Includes 50+ questions covering Junos configurations, networking protocols, and routing concepts
-- 🔄 **Dynamic Quiz Generation**: Customize each quiz with your preferred number of questions (5-50)
-- 🎨 **Terminal UI**: Clean, colorful interface designed for the command line
-- ✅ **Detailed Explanations**: Every question includes explanations for both correct and incorrect answers
-- 📊 **Progress Tracking**: Visual progress bar and score calculation
-- 🎯 **Study Focus**: Questions target key JNCIA-105 exam topics
+- **100+ questions** across 7+ exam topics
+- **Practice quiz**: Choose number of questions (10–100 or All) and filter by topic
+- **Immediate feedback**: Correct answer and explanation after each question
+- **Flashcards**: Review by topic; flip to see answer and explanation
+- **Exam topics**: Networking fundamentals, Junos OS, CLI, configuration, monitoring, routing, security
 
-## Installation
+## Quick Start (Website)
 
-1. Ensure you have Python 3.x installed on your system
-2. Clone this repository:
-   ```
-   git clone https://github.com/Ryheembon/Quiz-jncia.git
-   ```
-3. Navigate to the repository directory:
-   ```
-   cd Quiz-jncia
-   ```
-4. Make the script executable:
-   ```
-   chmod +x cli_quiz.py
-   ```
+1. Open `index.html` in a modern browser (Chrome, Firefox, Safari, Edge).
+2. Click **Start Practice Quiz** or scroll to **Practice quiz**.
+3. Select **Number of questions** and **Topic** (or "All topics").
+4. Click **Start quiz**, answer each question, then **Submit answer** → read explanation → **Next question**.
+5. Use **Flashcards** to review concepts by topic.
 
-## Usage
-
-1. Run the application:
-   ```
-   ./cli_quiz.py
-   ```
-2. Choose the number of questions you want (between 5 and 50)
-3. Answer each question by entering the number that corresponds to your choice
-4. Review feedback and explanations for each question
-5. See your final score and assessment at the end
-6. Choose to take another quiz or exit
-
-## Study Tips
-
-To maximize your JNCIA-105 exam preparation:
-
-1. **Regular Practice**: Take quizzes daily, focusing on different topics each day
-2. **Review Explanations**: Pay special attention to the explanations provided for each question
-3. **Track Progress**: Monitor your scores over time to identify improvement
-4. **Focus on Weak Areas**: Use the quiz results to identify topics needing more study
-5. **Combine with Lab Practice**: Supplement quiz practice with hands-on lab configurations
+No server or install required—everything runs in the browser.
 
 ## Exam Topics Covered
 
-- Routing Fundamentals (OSPF, BGP, Static Routing)
-- Security Features (Zones, Policies, NAT)
-- Interface Configuration
-- Troubleshooting Commands
-- High Availability
-- System Administration
-- Configuration Management
+- **Networking fundamentals** — Collision/broadcast domains, L2/L3, subnetting, longest match, routing tables (inet.0, inet6.0)
+- **Junos OS fundamentals** — RE vs PFE, control vs forwarding plane, transit vs exception traffic
+- **User interfaces** — CLI modes, active vs candidate config, load merge/override, J-Web
+- **Configuration basics** — Users, login classes, NTP, SNMP, syslog, rescue config, commit confirmed
+- **Operational monitoring** — show/monitor commands, ping, traceroute, upgrades, root recovery
+- **Routing fundamentals** — Static, OSPF, BGP, route preference, routing policy, firewall filters
+- **Security** — Zones, policies, NAT, IPsec, authentication
 
-## Why This Tool?
+## CLI Quiz (Optional)
 
-This CLI quiz application was designed with exam efficiency in mind:
+If you prefer the command line:
 
-- **Focused Content**: Questions directly relevant to JNCIA-105 exam topics
-- **Command Emphasis**: Heavy focus on Junos CLI commands and syntax
-- **Realistic Format**: Multiple choice questions similar to the actual exam
-- **Time Management**: Practice with varying numbers of questions to build time-awareness
+```bash
+python3 cli_quiz.py
+```
 
-## Contributing
+Choose 5–50 questions and answer by number. The CLI uses the same style of questions (multiple choice + explanations).
 
-Contributions to improve the question bank or add features are welcome:
+## Study Tips
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
+1. **Practice daily** — Do at least one quiz (20–50 questions) each day.
+2. **Read every explanation** — Even when you're right, the explanation reinforces the concept.
+3. **Filter by topic** — Use the topic filter to drill weak areas (e.g. Security, Routing).
+4. **Use flashcards** — Great for quick review without scoring pressure.
+5. **Aim for 70%+** — Treat that as your minimum before exam day.
 
-## License
+## Files
 
-This project is open source and available for personal or educational use.
+- `index.html` — Main study site (quiz + flashcards + exam topics)
+- `questions.js` — 100+ JNCIA-Junos questions (multiple choice + explanations)
+- `script.js` — Quiz and flashcard logic
+- `styles.css` — Layout and theme
+- `cli_quiz.py` — Optional command-line quiz (Python)
+- `daily_guide.md` — Daily study plan
+- `study_plan.md` — 30-day study plan
 
-## Good Luck!
+## Good Luck
 
-Good luck on your JNCIA-105 exam! Remember that consistent practice is key to success.
+Good luck on your JNCIA-Junos exam. Consistent practice with this site and the CLI quiz will help you pass by Saturday.
