@@ -149,17 +149,21 @@
   if (nextQuestionBtn) {
     nextQuestionBtn.textContent = 'Submit answer';
     nextQuestionBtn.addEventListener('click', function () {
-      if (quizFeedback && quizFeedback.style.display === 'block') {
-        nextQuestion();
-        nextQuestionBtn.textContent = 'Submit answer';
-      } else {
-        if (selectedOptionIndex === null) {
-          alert('Please select an answer.');
-          return;
-        }
-        submitAnswer();
-        nextQuestionBtn.textContent = (quizIndex + 1 >= quizQuestions.length) ? 'See results' : 'Next question';
+      if (selectedOptionIndex === null) {
+        alert('Please select an answer.');
+        return;
       }
+      // Submit and show feedback
+      submitAnswer();
+      // After a short delay, move to the next question or results
+      setTimeout(function () {
+        if (quizIndex + 1 >= quizQuestions.length) {
+          quizIndex++;
+          showResults();
+        } else {
+          nextQuestion();
+        }
+      }, 1800);
     });
   }
   if (retryQuizBtn) retryQuizBtn.addEventListener('click', retryQuiz);
